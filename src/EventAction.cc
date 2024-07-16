@@ -64,7 +64,7 @@ void EventAction::EndOfEventAction(const G4Event*)
   G4double particleEnergy = particleGun->GetParticleEnergy();
   
   auto analysisManager = G4AnalysisManager::Instance();
-  if (fEdep > 1e-10*eV) {
+  if (fEdep > 0.01*MeV) {
     analysisManager->FillH1(1, particleEnergy);
   }
   analysisManager->FillH1(0, fEdep);

@@ -70,7 +70,7 @@ void RunAction::BeginOfRunAction(const G4Run*)
   G4String fileName = "B4.root";
   analysisManager->OpenFile(fileName);
   analysisManager->CreateH1("Etrue", "Energy deposition", 100, 0, 0.1*MeV);
-  analysisManager->CreateH1("Counts", "Revealed neutrons", 100, 1e-12*GeV, 10*GeV, "GeV", "none", "log");
+  analysisManager->CreateH1("Counts", "Revealed neutrons", 10, 1e-12*GeV, 10*GeV, "GeV", "none", "log");
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

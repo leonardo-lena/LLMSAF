@@ -50,7 +50,3 @@
 /vis/viewer/set/autoRefresh true
 /vis/viewer/refresh
 /vis/verbose warnings
-/gun/energy 1e-3 GeV
-/run/beamOn 100
-/analysis/h1/getVector
-/analysis/h2/getVector

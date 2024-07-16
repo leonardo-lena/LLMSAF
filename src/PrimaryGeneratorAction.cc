@@ -49,7 +49,6 @@ PrimaryGeneratorAction::PrimaryGeneratorAction(){
   G4String particleName;
   G4ParticleDefinition* particle = particleTable->FindParticle(particleName="neutron");
   fParticleGun->SetParticleDefinition(particle);
-  fParticleGun->SetParticleEnergy(0.6617*MeV);
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -93,10 +92,6 @@ void PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent){
   G4double z0 = -envSizeZ;
 
   fParticleGun->SetParticleMomentumDirection(G4ThreeVector(0.,0.,1.));
-
-  //square of guns sizes
-  G4double halfSide = 5*cm;
-  G4double step = 10*mm;
 
   fParticleGun->SetParticlePosition(G4ThreeVector(0,0,z0));
   fParticleGun->GeneratePrimaryVertex(anEvent);

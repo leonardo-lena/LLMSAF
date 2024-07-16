@@ -92,7 +92,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   G4ThreeVector pos = G4ThreeVector(0, 0, 0);
   
   G4double orbRadius = 2.5*cm;
-  G4double sphereRadius = 10*cm;
+  G4double sphereRadius = 15*cm;
 
   auto innerOrb = new G4Orb("Orb", 
     orbRadius);
